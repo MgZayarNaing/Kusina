@@ -19,3 +19,14 @@ class About2(models.Model):
 class About3(models.Model):
     image = models.ImageField(upload_to='about3/')
     name = models.CharField(max_length=200)
+
+class Project(models.Model):
+    years = models.CharField(max_length=200)
+    customers =  models.CharField(max_length=200)
+    projects = models.CharField(max_length=200)
+    days = models.CharField(max_length=200)
+
+class Menu(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='menu/')
+    price = models.CharField(max_length=200)

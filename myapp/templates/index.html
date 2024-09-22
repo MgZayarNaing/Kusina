@@ -71,5 +71,90 @@
     </div>
 </section>
 
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/bg_4.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row d-md-flex align-items-center justify-content-center">
+            {% for p in project %}
+            <div class="col-lg-10">
+                <div class="row d-md-flex align-items-center">
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="text">
+                    <strong class="number" data-number="{{ p.years }}">0</strong>
+                    <span>Years of Experienced</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="text">
+                    <strong class="number" data-number="{{ p.customers }}">0</strong>
+                    <span>Happy Customers</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="text">
+                    <strong class="number" data-number="{{ p.projects }}">0</strong>
+                    <span>Finished Projects</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18">
+                  <div class="text">
+                    <strong class="number" data-number="{{ p.days }}">0</strong>
+                    <span>Working Days</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+      
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</section>
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+      <div class="col-md-7 text-center heading-section ftco-animate">
+          <span class="subheading">Specialties</span>
+        <h2 class="mb-4">Our Menu</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-4 menu-wrap">
+
+            {% for m in menu %}
+            <div class="menus d-flex ftco-animate">
+          <div class="menu-img img" style="background-image: url({{ m.image.url }});"></div>
+          <div class="text">
+              <div class="d-flex">
+                <div class="one-half">
+                  <h3>{{  m.name }}</h3>
+                </div>
+                <div class="one-forth">
+                  <span class="price">${{ m.price }}</span>
+                </div>
+              </div>
+          </div>
+        </div>
+        {%  endfor %}
+
+        </div>
+
+        
+
+        
+    </div>
+    
+    </div>
+
+</section>
+
 
 {% endblock %}
